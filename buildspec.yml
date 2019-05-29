@@ -1,10 +1,13 @@
 version: 0.1
 
 phases:
+  install:
+    commands:
+      - cd $CODEBUILD_SRC_DIR/iam-dk; npm install
   build:
     commands:
-      - echo Build completed on `date`
+      - cd $CODEBUILD_SRC_DIR/iam-dk; npm run build
 
 artifacts:
   files:
-    - '**/*'
+    - 'build/*'

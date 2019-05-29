@@ -12,6 +12,5 @@ phases:
 
 artifacts:
   files:
-    - 'build/**/*'
-  base-directory: iam-dk
-  discard-paths: yes
+    - '**/*'
+  base-directory: iam-dk/build/

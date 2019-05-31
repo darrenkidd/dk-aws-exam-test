@@ -1,10 +1,10 @@
-FROM       python:3.4.2
+FROM       python:3.7.0
 
 WORKDIR    /var/app
 
 RUN        pip3 install virtualenv
 RUN        virtualenv /var/app
-RUN        /var/app/bin/pip install --download-cache /src uwsgi
+RUN        /var/app/bin/pip install --cache-dir /src uwsgi
 
 RUN        useradd uwsgi -s /bin/false
 RUN        mkdir /var/log/uwsgi
@@ -22,6 +22,7 @@ ENV        UWSGI_LOG_FILE         /var/log/uwsgi/uwsgi.log
 EXPOSE     8080
 
 ADD        uwsgi-start.sh /
+ADD        application.py /var/app/
 
 CMD        []
 ENTRYPOINT ["/uwsgi-start.sh"]

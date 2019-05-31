@@ -19,7 +19,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 # Add Formatter to Handler
 handler.setFormatter(formatter)
 
-# add Handler to Logger
+# Add Handler to Logger
 logger.addHandler(handler)
 
 welcome = """
@@ -36,7 +36,7 @@ welcome = """
     or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
   -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Welcome</title>
+  <title>Darren's EBS Site</title>
   <style>
   body {
     color: #ffffff;
@@ -85,6 +85,7 @@ welcome = """
     right: 0px;
     bottom: 0px;
     left: 50%;
+    padding-top: 11em;
 
     background-color: #E0E0E0;
   }
@@ -99,32 +100,17 @@ welcome = """
     font-weight: normal;
     margin-bottom: 0em;
   }
-  ul {
-    padding-left: 1em;
-    margin: 0px;
-  }
-  li {
-    margin: 1em 0em;
-  }
   </style>
 </head>
 <body id="sample">
   <div class="textColumn">
-    <h1>Congratulations</h1>
-    <p>Your first AWS Elastic Beanstalk Python Application is now running on your own dedicated environment in the AWS Cloud</p>
+    <img src='https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortWaved&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue03&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Pale'
+/>
+    <p>My name is Darren, and I like to build things.</p>
   </div>
-  
   <div class="linksColumn"> 
-    <h2>What's Next?</h2>
-    <ul>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_django.html">Deploy a Django Application to AWS Elastic Beanstalk</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_flask.html">Deploy a Flask Application to AWS Elastic Beanstalk</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_custom_container.html">Customizing and Configuring a Python Container</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.loggingS3.title.html">Working with Logs</a></li>
-
-    </ul>
+    <h2>I've modified my Python App!</h2>
+    <p>That's actually not that special, really.</p>
   </div>
 </body>
 </html>

@@ -1,15 +1,12 @@
 import logging
 import logging.handlers
 
-from wsgiref.simple_server import make_server
-
-
 # Create logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 # Handler 
-LOG_FILE = '/opt/python/log/sample-app.log'
+LOG_FILE = '/var/log/uwsgi/sample-app.log' # /var/log/uwsgi is the default log path for Docker preconfigured python containers
 handler = logging.handlers.RotatingFileHandler(LOG_FILE, maxBytes=1048576, backupCount=5)
 handler.setLevel(logging.INFO)
 
@@ -123,7 +120,7 @@ def application(environ, start_response):
         try:
             if path == '/':
                 request_body_size = int(environ['CONTENT_LENGTH'])
-                request_body = environ['wsgi.input'].read(request_body_size).decode()
+                request_body = environ['wsgi.input'].read(request_body_size)
                 logger.info("Received message: %s" % request_body)
             elif path == '/scheduled':
                 logger.info("Received task %s scheduled at %s", environ['HTTP_X_AWS_SQSD_TASKNAME'], environ['HTTP_X_AWS_SQSD_SCHEDULED_AT'])
@@ -136,10 +133,4 @@ def application(environ, start_response):
     headers = [('Content-type', 'text/html')]
 
     start_response(status, headers)
-    return [response]
-
-
-if __name__ == '__main__':
-    httpd = make_server('', 8000, application)
-    print("Serving on port 8000...")
-    httpd.serve_forever()
+    return [response.encode('utf-8')]

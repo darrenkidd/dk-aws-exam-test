@@ -53,9 +53,6 @@ welcome = """
     -webkit-transition-duration: 4s;
     text-shadow: #fff 0px 0px 25px;
   }
-  a {
-    color: #0188cc;
-  }
   .textColumn, .linksColumn {
     padding: 2em;
   }
@@ -86,28 +83,16 @@ welcome = """
 
     background-color: #E0E0E0;
   }
-
-  h1 {
-    font-size: 500%;
-    font-weight: normal;
-    margin-bottom: 0em;
-  }
-  h2 {
-    font-size: 200%;
-    font-weight: normal;
-    margin-bottom: 0em;
-  }
   </style>
 </head>
 <body id="sample">
   <div class="textColumn">
-    <img src='https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortWaved&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue03&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Pale'
-/>
+    <img width="264" height="280" src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortWaved&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue03&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Pale" />
     <p>My name is Darren, and I like to build things.</p>
   </div>
   <div class="linksColumn"> 
-    <h2>I've modified my Python App!</h2>
-    <p>That's actually not that special, really.</p>
+    <img height="280" src="https://www.xero.com/content/xero/nz/about/media/downloads/_jcr_content/par/section_c9f8/section/column_control_588f/item0/one_image_ff1f/image.adapt.280.medium.jpg" />
+    <p>I work at Xero, Wellington</p>
   </div>
 </body>
 </html>

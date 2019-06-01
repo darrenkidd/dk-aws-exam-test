@@ -101,6 +101,7 @@ welcome = """
 def application(environ, start_response):
     path    = environ['PATH_INFO']
     method  = environ['REQUEST_METHOD']
+
     if method == 'POST':
         try:
             if path == '/':
@@ -113,9 +114,14 @@ def application(environ, start_response):
             logger.warning('Error retrieving request body for async work.')
         response = ''
     else:
-        response = welcome
+        if path == '/healthcheck':
+            response = ''
+            headers = [('Content-type', 'text/plain')]
+        else:
+            response = welcome
+            headers = [('Content-type', 'text/html')]
+
     status = '200 OK'
-    headers = [('Content-type', 'text/html')]
 
     start_response(status, headers)
     return [response.encode('utf-8')]

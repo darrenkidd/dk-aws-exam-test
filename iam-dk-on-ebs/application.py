@@ -88,11 +88,12 @@ welcome = """
 <body id="sample">
   <div class="textColumn">
     <img width="264" height="280" src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortWaved&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue03&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Pale" />
-    <p>My name is Darren, and I like to build things.</p>
+    <p>My name is Darren, and I like to build things. I work at Xero, Wellington.</p>
+    <img height="280" src="https://www.xero.com/content/xero/nz/about/media/downloads/_jcr_content/par/section_c9f8/section/column_control_588f/item0/one_image_ff1f/image.adapt.280.medium.jpg" />
   </div>
   <div class="linksColumn"> 
-    <img height="280" src="https://www.xero.com/content/xero/nz/about/media/downloads/_jcr_content/par/section_c9f8/section/column_control_588f/item0/one_image_ff1f/image.adapt.280.medium.jpg" />
-    <p>I work at Xero, Wellington</p>
+    <img height="280" src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraightStrand&accessoriesType=Prescription02&hairColor=Brown&facialHairType=Blank&clotheType=ShirtVNeck&clotheColor=Red&eyeType=Squint&eyebrowType=Default&mouthType=Smile&skinColor=Pale" />
+    <p style="color: black">My wife is pretty awesome!</p>
   </div>
 </body>
 </html>

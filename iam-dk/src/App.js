@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <DarrenAvatar />
+        <DarrenAvatar
         <p>
           Hi, my name is Darren Kidd, and I like to build things.
         </p>

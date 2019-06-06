@@ -6,6 +6,9 @@ phases:
         nodejs: 10
     commands:
       - cd $CODEBUILD_SRC_DIR/iam-dk; npm install
+  pre_build:
+    commands:
+      - cd $CODEBUILD_SRC_DIR/iam-dk; CI=true npm test -- --coverage
   build:
     commands:
       - cd $CODEBUILD_SRC_DIR/iam-dk; npm run build
